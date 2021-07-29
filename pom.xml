@@ -1590,7 +1590,7 @@ under the License.
 						<!--suppress MavenModelInspection -->
 						<test.randomization.seed>${test.randomization.seed}</test.randomization.seed>
 					</systemPropertyVariables>
-					<argLine>-Xms256m -Dmvn.forkNumber=${surefire.forkNumber} -XX:+UseG1GC -verbose:gc -Xloggc:verbosegc.log</argLine>
+					<argLine>-Xms256m -Dmvn.forkNumber=${surefire.forkNumber} -XX:+UseG1GC</argLine>
 				</configuration>
 				<executions>
 					<!--execute all the unit tests-->
