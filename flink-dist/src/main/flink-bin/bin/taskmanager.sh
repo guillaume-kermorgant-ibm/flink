@@ -40,7 +40,7 @@ if [[ $STARTSTOP == "start" ]] || [[ $STARTSTOP == "start-foreground" ]]; then
 
     # if no other JVM options are set, set the GC to G1
     if [ -z "${FLINK_ENV_JAVA_OPTS}" ] && [ -z "${FLINK_ENV_JAVA_OPTS_TM}" ]; then
-        export JVM_ARGS="$JVM_ARGS -XX:+UseG1GC"
+        export JVM_ARGS="$JVM_ARGS"
     fi
 
     # Add TaskManager-specific JVM options
