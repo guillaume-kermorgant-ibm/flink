@@ -247,16 +247,16 @@ fi
 # Sticky Scheduling
 ################################################################################
 
-if [[ ${PROFILE} != *"enable-adaptive-scheduler"* ]]; then #FLINK-21450
-	# must be run with sudo - disabling for now
-	# could be put in a seperate script which would be run with sudo
+# must be run with sudo and even then these tests are blinking - disabling for now
+# could be put in a seperate script which would be run with sudo
+# if [[ ${PROFILE} != *"enable-adaptive-scheduler"* ]]; then #FLINK-21450
 	# run_test "Local recovery and sticky scheduling end-to-end test" "$END_TO_END_DIR/test-scripts/test_local_recovery_and_scheduling.sh 4 3 hashmap false false 100" "skip_check_exceptions"
 	# run_test "Local recovery and sticky scheduling end-to-end test" "$END_TO_END_DIR/test-scripts/test_local_recovery_and_scheduling.sh 4 3 hashmap false true 100" "skip_check_exceptions"
 	# run_test "Local recovery and sticky scheduling end-to-end test" "$END_TO_END_DIR/test-scripts/test_local_recovery_and_scheduling.sh 4 10 rocks false false 100" "skip_check_exceptions"
 	# run_test "Local recovery and sticky scheduling end-to-end test" "$END_TO_END_DIR/test-scripts/test_local_recovery_and_scheduling.sh 4 10 rocks true false 100" "skip_check_exceptions"
 	# run_test "Local recovery and sticky scheduling end-to-end test" "$END_TO_END_DIR/test-scripts/test_local_recovery_and_scheduling.sh 4 10 rocks false true 100" "skip_check_exceptions"
 	# run_test "Local recovery and sticky scheduling end-to-end test" "$END_TO_END_DIR/test-scripts/test_local_recovery_and_scheduling.sh 4 10 rocks true true 100" "skip_check_exceptions"
-fi
+# fi
 
 printf "\n[PASS] All bash e2e-tests passed\n"
 
